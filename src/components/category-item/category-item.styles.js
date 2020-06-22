@@ -2,53 +2,17 @@ import styled, { css } from 'styled-components';
 
 import CustomStyles from '../custom-styles/custom-styles';
 
-
-export const DefaultSectionContainerWidth = css`
-    width: 23%;
-`;
-
-export const LargeSectionContainerWidth = css`
-    width: 49%;
-    img {
-        filter: grayscale(100%);
-    }
-`;
-
-const SectionWidth = props => {
-    if (props.size === 'large') {
-        return LargeSectionContainerWidth;
-    }
-    return DefaultSectionContainerWidth;
-}
-
-
-export const Zoom = css`
-    cursor: pointer;
-    &:hover img {
-        transform: scale(1.2);
-    }  
-`;
-
-
-const ZoomSectionContainer = props => {
-    if (props.zoom) {
-        return Zoom;
-    }
-}
-
 export const SectionContainer = styled.div`
     height: 360px;
     position: relative;
     overflow: hidden;
     margin-bottom: 30px;
-    ${SectionWidth}
 
     img {
         object-fit: cover;
         transition: all 3.5s;
     }
 
-    ${ZoomSectionContainer}
 `;
 
 export const LargeText = css`
