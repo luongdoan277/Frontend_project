@@ -16,8 +16,8 @@ const Category = ({sections}) => (
     <CategoryContainer>
         <TitleText>Shop By Categories</TitleText>
         <HomeCategoryContainer>
-            {sections.map(({title, id, imageUrl, size, match}) => (
-                <CategoryLink size={size} to={`${match}/${title.toLowerCase()}`} zoom>
+            {sections.map(({title, id, imageUrl, size}) => (
+                <CategoryLink size={size} to={`shop/${title.toLowerCase()}`} zoom>
                     <CategoryItem key={id} title={title} imageUrl={imageUrl} size={size}/>
                 </CategoryLink>
             ))}

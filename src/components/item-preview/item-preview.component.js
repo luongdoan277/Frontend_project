@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import {    BrightOverlay,
             ItemPreviewContainer,
             SectionContainer,
@@ -17,7 +16,7 @@ import {    BrightOverlay,
 import { RupiahFormat } from '../../utils/utils';
 import { addItem } from '../../redux/cart/cart.actions';
 
-const ItemPreview = ({ payload, addItem, match}) => {
+const ItemPreview = ({ payload, addItem}) => {
     const {imageUrl, name, size, price} = payload
     return (
         <ItemPreviewContainer >
@@ -32,7 +31,7 @@ const ItemPreview = ({ payload, addItem, match}) => {
                 </BrightOverlay>
             </SectionContainer>
             <DetailItemContainer>
-                <ProductLink to={`${match}/${name.toLowerCase()}`}>
+                <ProductLink to={`product/${name.toLowerCase()}`}>
                     <ItemNameText>
                         {name}
                     </ItemNameText>

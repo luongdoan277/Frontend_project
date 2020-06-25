@@ -19,6 +19,7 @@ import {    style,
         } from './footer.styles';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
+import {RupiahFormat} from "../../utils/utils";
 
 
 const Footer = () => (
@@ -71,7 +72,7 @@ const Footer = () => (
                 </FooterMediumContainer>
                 <FooterLargeContainer>
                     <FooterMainTitleText><strong>New to BerryBerri?</strong></FooterMainTitleText>
-                    <DefaultFooterText> Get a <Hightlight><strong>Rp 75.000 </strong></Hightlight> Voucher (plus the latest fashion news and product launches) just by subscribing to our newsletter.</DefaultFooterText>
+                    <DefaultFooterText> Get a <Hightlight><strong>{RupiahFormat(75000)} </strong></Hightlight> Voucher (plus the latest fashion news and product launches) just by subscribing to our newsletter.</DefaultFooterText>
                     <form >
                         <FormInput 
                             labelColor={"#dedede"}

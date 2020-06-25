@@ -19,6 +19,8 @@ import SignUpPage from './pages/sign-up/sign-up.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 import PaymentPage from './pages/payment/payment.component';
 import Notification from './components/notification/notification.component';
+import ProductPage from "./pages/product/product.component";
+
 
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
@@ -75,8 +77,8 @@ const App = ({ location, currentUser, checkUserSession, notifProps, setNotifClos
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
+          <Route path='/product' component={ProductPage} />
           <Route exact path='/checkout' component={CheckoutPage} />
-
           <Route exact path='/signin'
             render={() => currentUser ? (<Redirect to='/' />) : (<SignInPage />)}
           />
