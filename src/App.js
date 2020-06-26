@@ -28,6 +28,7 @@ import { selectCategoryForPreview } from './redux/shop/shop.selectors';
 import { selectNotifProps } from './redux/notif/notif.selectors';
 import { setNotifClose } from './redux/notif/notif.actions';
 import { selectCartItemsCount } from './redux/cart/cart.selectors';
+import {selectProductForPreview} from "./redux/product/product.selectors";
 
 const stripePromise = loadStripe("pk_test_mRRJ7GHZIUwNj4fhSj5vya5X00eIQVk1HM");
 
@@ -103,6 +104,7 @@ const App = ({ location, currentUser, checkUserSession, notifProps, setNotifClos
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
   collectionsArray: selectCategoryForPreview,
+  collectionsItem: selectProductForPreview,
   notifProps: selectNotifProps,
   totalCartItems: selectCartItemsCount
 });

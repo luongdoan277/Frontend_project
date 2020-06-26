@@ -11,7 +11,7 @@ import {connect} from "react-redux";
 import IncrementButton from "../increment-button/increment-button.component";
 import {MediumBlockContainer} from "../checkout-item/checkout-item.styles";
 import {AddCartButton} from "../item-preview/item-preview.styles";
-import {selectCategory} from "../../redux/shop/shop.selectors";
+import {selectProductDetail} from "../../redux/product/product.selectors";
 
 const ProductDetail = ({item, addItem, removeItemFromCart}) => {
     const {imageUrl, name, price, quantity, description, size} = item
@@ -49,7 +49,7 @@ const ProductDetail = ({item, addItem, removeItemFromCart}) => {
     )
 }
 const mapStateToProps = (state, ownProps) => ({
-    categoryItems: selectCategory(ownProps.match.params.categoryId)(state)
+    productItems: selectProductDetail(ownProps.match.params.Id)(state)
 })
 
 export default connect(mapStateToProps)(ProductDetail);

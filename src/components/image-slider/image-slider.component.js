@@ -6,7 +6,8 @@ import {
     DescriptionContainer,
     Caption,
     CaptionContainer,
-    TitleText
+    TitleText,
+    ShopLink
 } from './image-slider.styles';
 import CustomButton from '../custom-button/custom-button.component';
 
@@ -20,7 +21,9 @@ const ImageSlider = ({imageUrl, caption, textPosition, title}) => (
                         {caption}
                     </CaptionContainer>
                     <TitleText>{title}</TitleText>
-                    <CustomButton large>Shop Now</CustomButton>
+                    <ShopLink to={"/shop"}>
+                        <CustomButton large>Shop Now</CustomButton>
+                    </ShopLink>
                 </Caption>
                 
             </DescriptionContainer>

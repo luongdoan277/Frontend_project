@@ -17,7 +17,7 @@ import { RupiahFormat } from '../../utils/utils';
 import { addItem } from '../../redux/cart/cart.actions';
 
 const ItemPreview = ({ payload, addItem}) => {
-    const {imageUrl, name, size, price} = payload
+    const {imageUrl, name, size, price, id} = payload
     return (
         <ItemPreviewContainer >
             <SectionContainer size={size}>
@@ -31,7 +31,7 @@ const ItemPreview = ({ payload, addItem}) => {
                 </BrightOverlay>
             </SectionContainer>
             <DetailItemContainer>
-                <ProductLink to={`product/${name.toLowerCase()}`}>
+                <ProductLink to={`product/${id}`}>
                     <ItemNameText>
                         {name}
                     </ItemNameText>

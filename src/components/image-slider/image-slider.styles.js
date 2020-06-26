@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import CustomStyles from '../custom-styles/custom-styles';
+import {Link} from "react-router-dom";
 
 export const TitleText = styled.p`
     font-size: 26px;
@@ -9,7 +10,7 @@ export const TitleText = styled.p`
     font-family: ${CustomStyles.secondaryFontText};
     color: #afafaf;
 `;
-
+export const ShopLink = styled(Link)``;
 
 export const FlexLeft = css`
     align-items: flex-start;
