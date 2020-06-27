@@ -31,7 +31,7 @@ const ItemPreview = ({ payload, addItem}) => {
                 </BrightOverlay>
             </SectionContainer>
             <DetailItemContainer>
-                <ProductLink to={`product/${id}`}>
+                <ProductLink to={`/product/${id}`}>
                     <ItemNameText>
                         {name}
                     </ItemNameText>

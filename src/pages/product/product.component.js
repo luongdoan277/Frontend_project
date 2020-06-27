@@ -14,7 +14,7 @@ const ProductPage = ({ match, fetchProductsStart } ) => {
 
     return (
         <DefaultContainer>
-            <Route exact path={`/${match.path}/:productName`} component={ProductDetailContainer} />
+            <Route exact path={`/${match.path}/:itemId`} component={ProductDetailContainer} />
         </DefaultContainer>
     );
 }
