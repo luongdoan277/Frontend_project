@@ -1,3 +1,3 @@
 export const RupiahFormat = (nominal) => {
-    return (parseInt(nominal).toLocaleString('VI', {style: 'currency', currency: 'EUR', minimumFractionDigits: 0}));
+    return (parseInt(nominal).toLocaleString('VI', {style: 'currency', currency: 'VND', minimumFractionDigits: 0}));
 }
