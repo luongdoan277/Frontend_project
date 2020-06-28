@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import CategoryOverviewContainer from '../../components/category-overview/category-overview.container';
 import CategoryPageContainer from '../category/category.container';
 import { DefaultContainer } from './shop.styles';
-
 import { fetchCategoriesStart } from '../../redux/shop/shop.actions';
 
 const ShopPage = ({ match, fetchCategoriesStart } ) => {

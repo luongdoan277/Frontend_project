@@ -14,7 +14,6 @@ import {AddCartButton} from "../item-preview/item-preview.styles";
 import {selectProductDetail} from "../../redux/product/product.selectors";
 
 const ProductDetail = ({item, addItem, removeItemFromCart}) => {
-    const {imageUrl, name, price, quantity, description, size} = item
     return(
         <ProductDetailContainer>
             <ProductImage>
@@ -49,7 +48,7 @@ const ProductDetail = ({item, addItem, removeItemFromCart}) => {
     )
 }
 const mapStateToProps = (state, ownProps) => ({
-    productItems: selectProductDetail(ownProps.match.params.Id)(state)
+    productItems: selectProductDetail(ownProps.match.params.itemId)(state)
 })
 
 export default connect(mapStateToProps)(ProductDetail);

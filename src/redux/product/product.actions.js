@@ -4,9 +4,9 @@ export const fetchProductsStart = () => ({
     type: ShopActionTypes.FETCH_PRODUCT_START
 });
 
-export const fetchProductsSuccess = (item) => ({
+export const fetchProductsSuccess = (category) => ({
     type: ShopActionTypes.FETCH_PRODUCT_SUCCESS,
-    payload: item
+    payload: category
 });
 
 export const fetchProductsFailure = (errorMsg) => ({

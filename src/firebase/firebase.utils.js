@@ -69,23 +69,23 @@ export const convertCategoriesSnapshotToMap = (categories) => {
         return accumulator;
     },{});
 };
-//
-// export const convertProductSnapshotToMap = (item) => {
-//     const transformedProduct = item.docs.map(doc => {
-//         const { title, items } = doc.data();
-//
-//         return {
-//             routeName: encodeURI(title.toLowerCase()),
-//             id: doc.id,
-//             title,
-//             items
-//         }
-//     });
-//     return transformedProduct.reduce((accumulator, item) => {
-//         accumulator[item.items.name] = item;
-//         return accumulator;
-//     },{});
-// };
+
+export const convertProductSnapshotToMap = (item) => {
+    const transformedProduct = item.docs.map(doc => {
+        const { title } = doc.data();
+
+        return {
+            routeName: encodeURI(title.toLowerCase()),
+            id: doc.id,
+            title,
+            items: doc.item
+        }
+    });
+    return transformedProduct.reduce((accumulator, item) => {
+        accumulator[item.items.name] = item;
+        return accumulator;
+    },{});
+};
 firebase.initializeApp(config);
 
 export const getCurrentUser = () => {
