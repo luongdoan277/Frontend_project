@@ -19,7 +19,6 @@ import SignUpPage from './pages/sign-up/sign-up.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 import PaymentPage from './pages/payment/payment.component';
 import Notification from './components/notification/notification.component';
-import ProductPage from "./pages/product/product.component";
 
 
 import { selectCurrentUser } from './redux/user/user.selectors';
@@ -28,7 +27,6 @@ import { selectCategoryForPreview } from './redux/shop/shop.selectors';
 import { selectNotifProps } from './redux/notif/notif.selectors';
 import { setNotifClose } from './redux/notif/notif.actions';
 import { selectCartItemsCount } from './redux/cart/cart.selectors';
-import {selectProductForPreview} from "./redux/product/product.selectors";
 
 const stripePromise = loadStripe("pk_test_mRRJ7GHZIUwNj4fhSj5vya5X00eIQVk1HM");
 
@@ -78,7 +76,6 @@ const App = ({ location, currentUser, checkUserSession, notifProps, setNotifClos
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
-          <Route path='/product' component={ProductPage} />
           <Route exact path='/checkout' component={CheckoutPage} />
           <Route exact path='/signin'
             render={() => currentUser ? (<Redirect to='/' />) : (<SignInPage />)}
@@ -104,7 +101,6 @@ const App = ({ location, currentUser, checkUserSession, notifProps, setNotifClos
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
   collectionsArray: selectCategoryForPreview,
-  collectionsItem: selectProductForPreview,
   notifProps: selectNotifProps,
   totalCartItems: selectCartItemsCount
 });
